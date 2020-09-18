@@ -5,7 +5,7 @@ const Item = (props) => {
   const [gotten, setGotten] = useState(false);
 
   return (
-    <div className={style}>
+    <div className={style.Item}>
       <h3>this is Item</h3>
       <h1>i just deployed to netlify</h1>
       <button

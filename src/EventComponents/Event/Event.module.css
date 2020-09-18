@@ -1,14 +1,14 @@
-.Post {
-  width: 250px;
-  padding: 16px;
+.Event {
+  width: 100%;
+  padding: inherit;
   text-align: center;
   border: 1px solid #eee;
   box-shadow: 0 2px 3px #ccc;
   margin: 10px;
   box-sizing: border-box;
   cursor: pointer;
-}
-.CountDown {
+  flex-grow: inherit;
+
   color: aqua;
 }
 .Post:hover,
