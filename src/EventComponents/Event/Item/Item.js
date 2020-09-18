@@ -7,13 +7,14 @@ const Item = (props) => {
   return (
     <div className={style}>
       <h3>this is Item</h3>
+      <h1>i just deployed to netlify</h1>
       <button
         onClick={() => {
           setGotten(!gotten);
           console.log(gotten);
         }}
       >
-        { gotten  ? "gotten" : "not gotten"}
+        {gotten ? "gotten" : "not gotten"}
       </button>
     </div>
   );
