@@ -1,6 +1,6 @@
 .Event {
-  width: 100%;
-  padding: inherit;
+  width: 60%;
+  display: flexbox;
   text-align: center;
   border: 1px solid #eee;
   box-shadow: 0 2px 3px #ccc;
@@ -11,6 +11,24 @@
 
   color: aqua;
 }
+.Content {
+  /* Content is center horizontally */
+  align-items: center;
+  display: flex;
+
+  /*
+  The property name will stick to the left, and the value
+  will stick to the right
+  */
+  justify-content: space-between;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+
+  /* Spacing */
+  margin: 0px;
+  padding: 8px 0px;
+}
+
 .Post:hover,
 .Post:active {
   background-color: #c0ddf5;
