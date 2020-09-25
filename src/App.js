@@ -4,9 +4,10 @@ import Profile from "./Profile/Profile";
 
 function App() {
   return (
-    <div className="App">
+    <main className="container">
+      <p className="bg-success"> "starting excercise"</p>
       <Profile />
-    </div>
+    </main>
   );
 }
 

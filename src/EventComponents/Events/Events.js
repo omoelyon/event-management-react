@@ -1,30 +1,35 @@
 import React from "react";
-
+import events from "../../dummyData/eventData";
 import Event from "../Event/Event";
-import styles from "./Events.module.css";
-import { Card, ListGroup } from "react-bootstrap";
+// import styles from "./Events.module.css";
 
 const Events = (props) => {
+  // const eventList = { ...events };
+
   return (
     <div>
-      <h1>these are my Events</h1>
-      <div className={styles.Events}>
-        <Event />
-        <Event />
-
-        <Card style={{ width: "80%", alignItems: "center" }}>
-          <Card.Header>Featured</Card.Header>
-          <ListGroup variant="flush">
-            {/* <ListGroup.Item>Cras justo odio</ListGroup.Item> */}
-            <ListGroup.Item>
-              <Event />
-            </ListGroup.Item>
-            <ListGroup.Item>
-              <Event />
-            </ListGroup.Item>
-          </ListGroup>
-        </Card>
-      </div>
+      <table className="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">index</th>
+            <th scope="col">eventname</th>
+            <th scope="col">countdown</th>
+            <th scope="col">preparedness</th>
+          </tr>
+        </thead>
+        <tbody>
+          {events.map((event, index) => (
+            <tr key={event._id}>
+              <Event
+                index={index}
+                name={event.name}
+                date={event.eventDate}
+                preparedness={90}
+              />
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };

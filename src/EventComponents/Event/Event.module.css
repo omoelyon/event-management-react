@@ -28,7 +28,9 @@
   margin: 0px;
   padding: 8px 0px;
 }
-
+.tr {
+  text-align: center;
+}
 .Post:hover,
 .Post:active {
   background-color: #c0ddf5;
