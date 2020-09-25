@@ -5,7 +5,7 @@ import Profile from "./Profile/Profile";
 function App() {
   return (
     <main className="container">
-      <p className="bg-success"> "starting excercise"</p>
+      <p className="bg-success"> "my events"</p>
       <Profile />
     </main>
   );
