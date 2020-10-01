@@ -11,7 +11,6 @@ const Item = (props) => {
       <button
         onClick={() => {
           setGotten(!gotten);
-          console.log(gotten);
         }}
       >
         {gotten ? "gotten" : "not gotten"}

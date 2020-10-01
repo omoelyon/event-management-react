@@ -1,20 +1,20 @@
-import React, { Component } from "react";
-import axios from "../NewEvent/node_modules/axios";
+import React from "react";
+import styles from "./EventDetail.module.css";
 
-import "./FullPost.css";
+import ToDos from "./ToDos/ToDos";
+import { getEvents } from "../../dummyData/eventData";
 
-const EventDetail = (props) => (
-  <div className={styles.EventDetail}>
-    <h1>this is my event detail</h1>
-    <ToDo />
-    <ToDo />
-    <ToDo />
-    <ToDo />
-    <ToDo />
-    <Item />
-    <Item />
-    <Item />
-  </div>
-);
+const EventDetail = (props) => {
+  // const [EventData, setEventData] = useState({ EventData: getEvents[0] });
+  const EventData = getEvents()[0];
+  return (
+    <div className={styles.EventDetail}>
+      <h1>this is my event detail</h1>
+      <ToDos todos={EventData.toDoList} />
+
+      {/* <Items items={EventData.itemList} /> */}
+    </div>
+  );
+};
 
 export default EventDetail;

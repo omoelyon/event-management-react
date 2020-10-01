@@ -1,11 +1,9 @@
 import React from "react";
 import events from "../../dummyData/eventData";
 import Event from "../Event/Event";
-// import styles from "./Events.module.css";
+import EventDetail from "../EventDetail/EventDetail";
 
 const Events = (props) => {
-  // const eventList = { ...events };
-
   return (
     <div>
       <table className="table table-striped">
@@ -19,7 +17,9 @@ const Events = (props) => {
         </thead>
         <tbody>
           {events.map((event, index) => (
-            <tr key={event._id}>
+            <tr
+              key={event._id}
+            >
               <Event
                 index={index}
                 name={event.name}
@@ -30,6 +30,7 @@ const Events = (props) => {
           ))}
         </tbody>
       </table>
+      <EventDetail />
     </div>
   );
 };
